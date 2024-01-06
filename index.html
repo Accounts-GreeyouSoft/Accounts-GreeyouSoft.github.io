@@ -43,13 +43,15 @@
        padding: 2em 3em;
        border-radius: 1em;
       }
-      
+      create{
+       
+      }
      </style>
     <script>
      document.getElementById('name')
      document.getElementById('mail')
      document.getElementById('password')
-    function savedata(){
+    function datanew(){
      localStorage: {'name', $('anngouka_name'), 'mail', $('anngouka_mail'), 'password', $('anngouka_password')}
      const textsall = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.'.split('')
 　　　　const namedata = name
@@ -78,7 +80,7 @@
     }
 
       console.log(cipher_array.join(""))
-     function dataload(){
+     function datasave(){
       get.cookie: {'name', $('anngouka_name'), 'mail', $('anngouka_mail'), 'password', $('anngouka_password')}
      }
     </script>
@@ -106,9 +108,14 @@
       <input type="email" id="mail">
       <label for="password">パスワード</label>
       <input type="password" id="password">
-      <input type="submit" id="submit" value="送信"onclick="datasave()"> 
+      <input type="submit" id="submit" value="ログイン" onclick="datasave()">
+      <input type="submit" id="submit" value="作成" onclick="datanew()"> 
      </form>
-    </div> 
+    </div>
+	   <div class="url">
+	     <button class="create">アカウントを作成</button>
+	     <button class="back">アカウントにログイン</button>   
+	   </div>
    </div>
    </center>
   </body>
