@@ -12,7 +12,7 @@
       }
       img{
        width:10em;
-       height:10em
+       height:10em;
        margin-bottom: 5em;
       }
       .title{
@@ -43,8 +43,11 @@
        padding: 2em 3em;
        border-radius: 1em;
       }
-      create{
-       
+      .create{
+       visibility: visible;
+      }
+      .back{
+       visibility: hidden;
       }
      </style>
     <script>
@@ -83,6 +86,14 @@
      function datasave(){
       get.cookie: {'name', $('anngouka_name'), 'mail', $('anngouka_mail'), 'password', $('anngouka_password')}
      }
+     function hidden(){
+      document.querySelector('.create').style.visibility = 'hidden'
+      document.querySelector('.back').style.visibility = 'visible'
+     }
+     function back(){
+      document.querySelector('.create').style.visibility = 'visible'
+      document.querySelector('.back').style.visibility = 'hidden'
+     }
     </script>
    </head>
   <body>
@@ -113,8 +124,8 @@
      </form>
     </div>
 	   <div class="url">
-	     <button class="create">アカウントを作成</button>
-	     <button class="back">アカウントにログイン</button>   
+	     <button class="create" onclick="hidden()">アカウントを作成</button>
+	     <button class="back" onclick="back()">アカウントにログイン</button>   
 	   </div>
    </div>
    </center>
