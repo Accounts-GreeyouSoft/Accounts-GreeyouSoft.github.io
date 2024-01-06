@@ -22,10 +22,19 @@
        right:2em;
   
       }
-      #submit{
+      #logins{
+       visibility: visible; 
        padding: 1em 2em;
        background: skyblue;
-       width:0.9em
+       width:0.9em;
+       height:0.9em;
+       bottom: 3em;
+      }
+      #creates{
+       visibility: hidden;
+       padding: 1em 2em;
+       background: skyblue;
+       width:0.9em;
        height:0.9em;
        bottom: 3em;
       }
@@ -89,10 +98,12 @@
      function hidden(){
       document.querySelector('.create').style.visibility = 'hidden'
       document.querySelector('.back').style.visibility = 'visible'
+      document.querySelector('#creates').style.visibility = 'hidden'
      }
      function back(){
       document.querySelector('.create').style.visibility = 'visible'
       document.querySelector('.back').style.visibility = 'hidden'
+      document.querySelector('#creates').style.visibility = 'visible'
      }
     </script>
    </head>
@@ -119,8 +130,8 @@
       <input type="email" id="mail">
       <label for="password">パスワード</label>
       <input type="password" id="password">
-      <input type="submit" id="submit" value="ログイン" onclick="datasave()">
-      <input type="submit" id="submit" value="作成" onclick="datanew()"> 
+      <input type="submit" id="logins" value="ログイン" onclick="datasave()">
+      <input type="submit" id="creates" value="作成" onclick="datanew()"> 
      </form>
     </div>
 	   <div class="url">
