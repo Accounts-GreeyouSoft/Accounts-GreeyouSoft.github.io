@@ -60,14 +60,20 @@
       }
      </style>
     <script>
-     document.getElementById('name')
-     document.getElementById('mail')
-     document.getElementById('password')
+     const name = document.getElementById('name')
+     const mail = document.getElementById('mail')
+     const password = document.getElementById('password')
 
       console.log(cipher_array.join(""))
      function datasave(){
-      get.cookie: {'name', $('anngouka_name'), 'mail', $('anngouka_mail'), 'password', $('anngouka_password')}
+      get.cookie: {'name', , 'mail', $('anngouka_mail'), 'password', $('anngouka_password')} 
      }
+	if (username ===  && password === 'your_password') {
+                // If the username and password are correct, redirect to the login management site
+                window.location.href = 'https://accounts.greeyousoft.f5.si/admin';
+            } else {
+                alert('Invalid username or password');
+            }
      
     </script>
    </head>
