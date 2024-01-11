@@ -60,15 +60,14 @@
       }
      </style>
     <script>
-     const name = document.getElementById('name')
      const mail = document.getElementById('mail')
      const password = document.getElementById('password')
 
       console.log(cipher_array.join(""))
      function datasave(){
-      get.cookie: {'name', , 'mail', $('anngouka_mail'), 'password', $('anngouka_password')} 
+      get.cookie: {'name', name, 'mail', mail, 'password', password} 
      }
-	if (username ===  && password === 'your_password') {
+	if (mail === mail && password === password) {
                 // If the username and password are correct, redirect to the login management site
                 window.location.href = 'https://accounts.greeyousoft.f5.si/admin';
             } else {
@@ -93,9 +92,7 @@
      </center> 
     </div>
     <div class="forms">
-     <form>
-      <label for="name" >名前</label>
-      <input type="text" id="name">
+     <form
       <label for="mail">メール</label>
       <input type="email" id="mail">
       <label for="password">パスワード</label>
