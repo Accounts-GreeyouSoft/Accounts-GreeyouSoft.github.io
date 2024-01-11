@@ -63,33 +63,6 @@
      document.getElementById('name')
      document.getElementById('mail')
      document.getElementById('password')
-    function datanew(){
-     localStorage: {'name', $('anngouka_name'), 'mail', $('anngouka_mail'), 'password', $('anngouka_password')}
-     const textsall = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.'.split('')
-　　　　const namedata = name
-      const maildata = mail
-      const passworddata = mail
-　　　　const max = textsall.length + 1
-　　　　const cipher_name = []
-      const cipher_mail = []
-      const cipher_password = []
-　　　　namedata.split('').map((t) =>{
-	　　　 const nameindex = textsall.indexOf(t) == max ? 0 : textsall.indexOf(t) + 1
-	　　　 cipher_name.push(textsall[nameindex])
-       const anngouka_name = cipher_name.push(textsall[nameindex])
-      })
-      maildata.split('').map((t) =>{
-	　　　 const mailindex = textsall.indexOf(t) == max ? 0 : textsall.indexOf(t) + 1
-	　　　 cipher_mail.push(textsall[mailindex])
-       const anngouka_mail = cipher_mail.push(textsall[mailindex])
-      })
-      passworddata.split('').map((t) =>{
-	　　　 const passwordindex = textsall.indexOf(t) == max ? 0 : textsall.indexOf(t) + 1
-	　　　 cipher_password.push(textsall[passwordindex])
-       const anngouka_password = cipher_password.push(textsall[passwordindex])
-      })
-      set.cookie: {'name', $('anngouka_name'), 'mail', $('anngouka_mail'), 'password', $('anngouka_password')}
-    }
 
       console.log(cipher_array.join(""))
      function datasave(){
